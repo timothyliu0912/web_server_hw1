@@ -112,6 +112,11 @@ void handle_socket(int fd)
             tmp++; 
         }
         fclose(fp);
+        /*printf("Received file from client Successful!\n\n\n");
+        int index = open("server.html", O_RDONLY);
+        char filebuff[10000];
+        int indexlen = read(index, filebuff, 10000);
+        write(fd, filebuff, indexlen);*/
         write(fd,"Done",4);
 		
     }
